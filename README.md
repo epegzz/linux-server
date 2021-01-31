@@ -40,4 +40,5 @@ run `chsh`  (and enter `/usr/bin/zsh`)
 ```bash
 mkdir -p "$HOME/.config"
 git clone https://github.com/epegzz/linux-server.git "$HOME/.config/linux-server"
+~/.config/linux-server/install.sh
 ```
