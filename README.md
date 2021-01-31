@@ -20,7 +20,7 @@ modify `/etc/ssh/sshd_config`:
 
 ```
 PasswordAuthentication no
-PermitRootLogin No
+PermitRootLogin no
 ```
 
 ## Install Git
@@ -38,6 +38,6 @@ run `chsh`  (and enter `/usr/bin/zsh`)
 ## Install epegzz/linux-server
 
 ```bash
-mkdir -p “$HOME/.config”
-git clone https://github.com/epegzz/linux-server.git “$HOME/.config/linux-server
+mkdir -p "$HOME/.config"
+git clone https://github.com/epegzz/linux-server.git "$HOME/.config/linux-server"
 ```
