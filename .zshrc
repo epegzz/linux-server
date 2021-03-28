@@ -30,10 +30,10 @@ setopt HIST_VERIFY
 
 # some more ls aliases
 alias ls="ls -G --color"
-alias ll='ls -lh -G --color'
-alias lla='ls -lah -G --color'
-alias la='ls -Ah -G --color'
-alias l='ls -CF -G --color'
+alias ll='ls -lh -G'
+alias lla='ls -lah -G'
+alias la='ls -Ah -G'
+alias l='ls -CF -G'
 
 # Play safe!
 alias 'rm=rm -i'
