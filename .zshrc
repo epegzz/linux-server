@@ -7,17 +7,17 @@ case "${unameOut}" in
 esac
 
 # ls aliases
-lsColorArg="--color"
+lsColorsArg="--color"
 if [[ "$machine" = "mac" ]]
 then
-  lsColorArg="-G"
+  lsColorsArg="-G"
 fi
 
-alias ll="ls -lh ${lsColorArg}"
-alias lla="ls -lah ${lsColorArg}"
-alias la="ls -Ah ${lsColorArg}"
-alias l="ls -CF ${lsColorArg}"
-alias ls="ls ${lsColorArg}"
+alias ll="ls -lh ${lsColorsArg}"
+alias lla="ls -lah ${lsColorsArg}"
+alias la="ls -Ah ${lsColorsArg}"
+alias l="ls -CF ${lsColorsArg}"
+alias ls="ls ${lsColorsArg}"
 
 # Colors!
 export TERM=xterm-256color
