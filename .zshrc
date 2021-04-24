@@ -1,3 +1,24 @@
+# Helper to find out whether we are on linux or on MacOS
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=linux;;
+    Darwin*)    machine=mac;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+
+# ls aliases
+lsColorArg="--color"
+if [[ "$machine" = "mac" ]]
+then
+  lsColorArg="-G"
+fi
+
+alias ll="ls -lh ${lsColorArg}"
+alias lla="ls -lah ${lsColorArg}"
+alias la="ls -Ah ${lsColorArg}"
+alias l="ls -CF ${lsColorArg}"
+alias ls="ls ${lsColorArg}"
+
 # Colors!
 export TERM=xterm-256color
 
@@ -27,13 +48,6 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
-
-# some more ls aliases
-alias ls="ls -G --color"
-alias ll='ls -lh -G'
-alias lla='ls -lah -G'
-alias la='ls -Ah -G'
-alias l='ls -CF -G'
 
 # Play safe!
 alias 'rm=rm -i'
