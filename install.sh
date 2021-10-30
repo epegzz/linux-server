@@ -33,3 +33,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
 ## Install LazyDocker
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+
+## Add user to docker group (needs restart to work)
+sudo groupadd docker
+sudo usermod -aG docker $USER
