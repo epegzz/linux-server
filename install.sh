@@ -1,7 +1,12 @@
 #!/bin/zsh
 
+## set shell to zsh
+sudo chsh -s $(which zsh)
+
 ## Install Zinit
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma-continuum/zinit/master/doc/install.sh)"
+
 
 ## Install zsh Pure prompt
 mkdir -p “$HOME/.zsh”
@@ -17,7 +22,8 @@ cat << EOF >> ~/.zshrc
 EOF
 
 ## Install EternalTerminal (Ubuntu)
-echo "deb https://github.com/MisterTea/debian-et/raw/master/debian-source/ buster main" | sudo tee -a /etc/apt/sources.list.d/et.list
-curl -sSL https://github.com/MisterTea/debian-et/raw/master/et.gpg | sudo apt-key add -
-sudo apt update
-sudo apt install et
+sudo add-apt-repository ppa:jgmath2000/et -y
+sudo apt-get update -y
+sudo apt-get install et -y
+sudo systemctl enable et.service
+sudo systemctl start et
