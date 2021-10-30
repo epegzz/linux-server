@@ -103,3 +103,6 @@ load-nvmrc
 
 # fd
 alias fd=fdfind
+
+# ld
+alias ld=lazydocker
