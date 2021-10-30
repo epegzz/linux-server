@@ -27,3 +27,6 @@ sudo apt-get update -y
 sudo apt-get install et -y
 sudo systemctl enable et.service
 sudo systemctl start et
+
+## Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
