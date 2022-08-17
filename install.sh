@@ -1,12 +1,13 @@
 #!/bin/zsh
 
+## Install zsh
+sudo apt install zsh
+
 ## set shell to zsh
 sudo chsh -s $(which zsh)
 
 ## Install Zinit
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma-continuum/zinit/master/doc/install.sh)"
-
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 
 ## Install zsh Pure prompt
 mkdir -p “$HOME/.zsh”
